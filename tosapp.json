@@ -1,0 +1,111 @@
+{
+  "app_id": "changedetectiondocker",
+  "title": "ChangeDetection.io",
+  "image": "dgtlmoon/changedetection.io:0.70.2",
+  "repo_name": "changedetection",
+  "mode": "plain",
+  "container_port": 5000,
+  "category": [
+    "Utilities"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/changedetectiondocker/datastore",
+      "container": "/datastore"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai",
+    "HOME": "/tmp"
+  },
+  "auth": "dgtlmoon",
+  "upstream_url": "https://github.com/dgtlmoon/changedetection.io",
+  "upstream_license": "Apache-2.0",
+  "descript": "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder.",
+  "release_note": "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/docker-entrypoint.sh"
+    ],
+    "cmd": [
+      "python",
+      "./changedetection.py",
+      "-d",
+      "/datastore"
+    ],
+    "exposed_ports": [
+      5000
+    ],
+    "declared_volumes": [],
+    "image_healthcheck": [],
+    "digest": "dgtlmoon/changedetection.io@sha256:36ebb3586e9a6b14af6fb488c6e29b60eceb79ee414ecdb6ac2b91dd25b1c7ba",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "",
+    "trial_run": {
+      "ok": false,
+      "http_code": "",
+      "state": "exited",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "ore\n2026-11-09 15:41:53.645 | ERROR    | changedetectionio.model:commit:697 - Failed to commit e3357ecd-26d2-49df-84eb-3ed809459c0c: [Errno 13] Permission denied: '/datastore/e3357ecd-26d2-49df-84eb-3ed809459c0c'\nTraceback (most recent call last):\n  File \"/app/./changedetection.py\", line 8, in <module>\n    changedetectionio.main()\n  File \"/app/changedetectionio/__init__.py\", line 401, in main\n    datastore = store.ChangeDetectionStore(datastore_path=app_config['datastore_path'], version_tag=__version__, include_default_watches=include_default_watches)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/changedetectionio/store/__init__.py\", line 67, in __init__\n    self.reload_state(datastore_path=datastore_path, include_default_watches=include_default_watches, version_tag=version_tag)\n  File \"/app/changedetectionio/store/__init__.py\", line 248, in reload_state\n    self.init_fresh_install(include_default_watches=include_default_watches,\n  File \"/app/changedetectionio/store/__init__.py\", line 316, in init_fresh_install\n    self.add_watch(\n  File \"/app/changedetectionio/store/__init__.py\", line 893, in add_watch\n    new_watch.ensure_data_dir_exists()\n  File \"/app/changedetectionio/model/__init__.py\", line 598, in ensure_data_dir_exists\n    os.mkdir(self.data_dir)\nPermissionError: [Errno 13] Permission denied: '/datastore/23123787-f5c2-4c2c-99b3-9119c21695e3'",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "dgtlmoon",
+      "repo": "changedetection.io",
+      "description": "Best and simplest tool for website change detection, web page monitoring, and website change alerts. Perfect for tracking content changes, price drops, restock alerts, and website defacement monitoring— MCP included! all for free or enjoy our SaaS plan!",
+      "license": "Apache-2.0",
+      "homepage": "https://changedetection.io"
+    }
+  },
+  "entrypoint_file": "src/entrypoint.sh",
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "changedetectiondocker",
+  "github_repo": "changedetection",
+  "upstream_version": "0.70.2",
+  "release_tag_prefix": "v",
+  "version": "0.70.2-1",
+  "help": "https://github.com/Moechz/changedetectionio/issues",
+  "official": "https://github.com/dgtlmoon/changedetection.io",
+  "license": "Apache-2.0",
+  "docker_socket": false,
+  "group_add": [],
+  "healthcheck": [
+    "CMD-SHELL",
+    "python3 -c \"import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:5000/',timeout=5).status==200 else 1)\""
+  ],
+  "healthcheck_start_period": "60s",
+  "translations": {
+    "zh-cn": {
+      "descript": "ChangeDetection.io 帮你盯着网页：把商品页、价格、发布说明或公告页加进去，内容一变就通知你。它既能直接比对 HTML，也能用内置浏览器真实渲染页面，保留每次差异历史，并支持邮件、webhook、ntfy/Gotify 等通知方式。所有监控项与历史都保存在应用数据目录。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。打开界面后添加要监控的网址即可；监控项、快照与设置都保存在 DockerAppData/changedetectiondocker/datastore。需要 JavaScript 的页面会用内置浏览器渲染，比较吃内存——监控大量动态页面时请留意 NAS 负载。通知是按监控项单独配置的（邮件/webhook）。界面为纯 HTTP，外网访问请配置带 TLS 的反向代理。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 ChangeDetection.io 0.70.2，以非 root 容器运行。网页变更监控，支持浏览器渲染、差异历史与通知；状态全部保存在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "ChangeDetection.io 幫你盯著網頁：把商品頁、價格、發佈說明或公告頁加進去，內容一變就通知你。它既能直接比對 HTML，也能用內建瀏覽器真實渲染頁面，保留每次差異歷史，並支援電郵、webhook、ntfy/Gotify 等通知方式。所有監控項與歷史都保存在應用資料目錄。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。開啟介面後新增要監控的網址即可；監控項、快照與設定都保存在 DockerAppData/changedetectiondocker/datastore。需要 JavaScript 的頁面會用內建瀏覽器渲染，比較吃記憶體——監控大量動態頁面時請留意 NAS 負載。通知是按監控項單獨設定的（電郵/webhook）。介面為純 HTTP，外網存取請配置帶 TLS 的反向代理。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 ChangeDetection.io 0.70.2，以非 root 容器運行。網頁變更監控，支援瀏覽器渲染、差異歷史與通知；狀態全部保存在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/datastore` (mounted from `DockerAppData/changedetectiondocker/datastore`) holds `changedetection.json`, the per-watch folders with the stored snapshots and history, and the app's own settings.",
+  "design_notes": [
+    "**Interpreter healthcheck.** The image ships neither curl nor wget, so the healthcheck uses the bundled Python to fetch the start page.",
+    "**HOME moved to /tmp.** The app writes caches under `$HOME`; pointing `HOME` at the container's `/tmp` keeps the read-only application code untouched.",
+    "**One volume, one port.** Only `/datastore` is persistent and only container port 5000 is published."
+  ],
+  "limitations": [
+    "- Browser-rendered watches need noticeably more RAM than plain HTML watches.",
+    "- The web UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+    "- Notification channels (SMTP, webhook, ntfy) are configured per watch and are not pre-set by this package."
+  ],
+  "host_port": 8037
+}

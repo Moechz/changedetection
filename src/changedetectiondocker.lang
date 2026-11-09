@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "changedetectiondocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[zh-cn]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io 帮你盯着网页：把商品页、价格、发布说明或公告页加进去，内容一变就通知你。它既能直接比对 HTML，也能用内置浏览器真实渲染页面，保留每次差异历史，并支持邮件、webhook、ntfy/Gotify 等通知方式。所有监控项与历史都保存在应用数据目录。"
+release_note = "1. 首个版本：基于 Docker Hub 的 ChangeDetection.io 0.70.2，以非 root 容器运行。网页变更监控，支持浏览器渲染、差异历史与通知；状态全部保存在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。打开界面后添加要监控的网址即可；监控项、快照与设置都保存在 DockerAppData/changedetectiondocker/datastore。需要 JavaScript 的页面会用内置浏览器渲染，比较吃内存——监控大量动态页面时请留意 NAS 负载。通知是按监控项单独配置的（邮件/webhook）。界面为纯 HTTP，外网访问请配置带 TLS 的反向代理。"
+
+[zh-hk]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io 幫你盯著網頁：把商品頁、價格、發佈說明或公告頁加進去，內容一變就通知你。它既能直接比對 HTML，也能用內建瀏覽器真實渲染頁面，保留每次差異歷史，並支援電郵、webhook、ntfy/Gotify 等通知方式。所有監控項與歷史都保存在應用資料目錄。"
+release_note = "1. 首個版本：基於 Docker Hub 的 ChangeDetection.io 0.70.2，以非 root 容器運行。網頁變更監控，支援瀏覽器渲染、差異歷史與通知；狀態全部保存在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。開啟介面後新增要監控的網址即可；監控項、快照與設定都保存在 DockerAppData/changedetectiondocker/datastore。需要 JavaScript 的頁面會用內建瀏覽器渲染，比較吃記憶體——監控大量動態頁面時請留意 NAS 負載。通知是按監控項單獨設定的（電郵/webhook）。介面為純 HTTP，外網存取請配置帶 TLS 的反向代理。"
+
+[fr-fr]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[de-de]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[it-it]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[es-es]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[hu-hu]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[ja-jp]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[ko-kr]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[pl-pl]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[ru-ru]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[tr-tr]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[pt-pt]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[ar-sa]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[cs-cz]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[he-il]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[id-id]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[nb-no]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[nl-nl]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[sv-se]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[th-th]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
+[vi-vn]
+name         = "ChangeDetection.io"
+auth         = "dgtlmoon"
+version      = "@@VERSION@@"
+descript     = "ChangeDetection.io watches web pages for you: point it at a product page, a price, a release note or a public announcement, and it notifies you when the content changes. It can compare plain HTML or render pages in a real browser, keeps a diff history, and sends alerts by email, webhook or ntfy/Gotify. All watches and history stay in the application data folder."
+release_note = "1. First release: ChangeDetection.io 0.70.2 from Docker Hub as a non-root container. Web-page change monitoring with browser rendering, diff history and notifications; all state in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the web UI and add a URL to watch; every watch, snapshot and setting lives in DockerAppData/changedetectiondocker/datastore. Pages that need JavaScript are rendered with the bundled browser - that costs memory, so keep an eye on the NAS when watching many visual pages. Notifications are configured per watch (email/webhook). Plain HTTP; use a TLS reverse proxy for internet access."
+
